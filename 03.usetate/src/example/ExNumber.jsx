@@ -15,6 +15,9 @@ const ExNumber = () => {
         num++
         console.log(num)
         setNumber(number +1)
+        // number라는 State값을 바꾼다
+        // --> 바뀐값으로 출력하겠다
+        // --> ExNumber(현재 컴포넌트)를 재실행시킨다 -> 일반변수는 초기값으로 돌아감
     }
   return (
     <div>
