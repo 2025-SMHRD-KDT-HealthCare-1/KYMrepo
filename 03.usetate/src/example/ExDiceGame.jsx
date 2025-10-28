@@ -1,7 +1,7 @@
-import React, { useRef, useState} from 'react'
+import React, { useEffect, useRef, useState} from 'react'
 
-let comScore = 0;
-let userScore = 0;
+// let comScore = 0;
+// let userScore = 0;
 
 const ExDiceGame = () => {
 
@@ -32,14 +32,17 @@ const ExDiceGame = () => {
             setUser(user + 1);
             userScore = user + 1;
         };
-
-        if (comScore === 10){
-            setResult("COM 승리")
-        }
-        else if (userScore === 10){
-            setResult("USER 승리")
-        };
+        // useEffect 이용해서 만들어주세요
     };
+
+    useEffect(() => {
+      if(com==10){
+        setResult('COM WIN')
+      }
+      else if(user==10){
+        setResult('USER WIN')
+      }
+    }, [com, user]);
 
   return (
     <div>
