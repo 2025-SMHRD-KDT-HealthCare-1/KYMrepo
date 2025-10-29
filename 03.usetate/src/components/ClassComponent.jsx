@@ -44,6 +44,13 @@ export class ClassComponent extends Component {
     componentDidUpdate(){
         console.log("4. 컴포넌트가 업데이터(props나 state가 변경)");
     }
+
+    // 5. componentWillUnmount
+    //  : 컴포넌트가 제거되기 직전에 실행
+    //  : 타이머, 이벤트 리스너, 네트워크 연결 종료 등 정리(clenup)할 때 사용
+    componentWillUnmount(){
+        console.log("5. 컴포넌트가 언마운트(사라짐)");
+    }
     handleIncrement(){
         this.setState({
             num: this.state.num + 1,

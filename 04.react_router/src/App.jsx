@@ -4,8 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from '../component/Home'
 import About from '../component/About'
-import Join from '../component/Join'
-import Login from '../component/Login'
+import Join from '../../myreact/src/component/Join'
+import Login from '../../myreact/src/component/Login'
 import {Route, Routes} from 'react-router-dom'
 
 // Router : 주소값에 따라 다른 컴포넌트를 출력하는 방법

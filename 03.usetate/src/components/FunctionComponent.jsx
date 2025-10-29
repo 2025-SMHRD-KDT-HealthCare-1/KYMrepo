@@ -43,7 +43,7 @@ const FunctionComponent = () => {
 
     const handleIncrement = () => {
         setNum(num + 1);
-
+        
         
     }
 
