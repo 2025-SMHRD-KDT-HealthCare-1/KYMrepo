@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link, useNavigate} from 'react-router-dom' 
 import { useRef, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 const Login = () => {
 
@@ -11,13 +12,23 @@ const Login = () => {
   const [inputId, setId] = useState('')
   const [inputPw, setInputPw] = useState('')
 
+  const [query, setQuery] = useSearchParams();
+
+  console.log(query.get('id'))
+  console.log(query.get('pw'))
+  console.log(query.get('nick'))
+
+  let id = query.get('id')
+  let pw = query.get('pw')
+  let nick = query.get('nick')
+
   const btnJoin=()=>{
     inputPw
     inputId
 
-    if(inputId=='smhrd' && inputPw=='123'){
-      // Login 페이지로 이동
-      nav('/')
+    if(inputId==id && inputPw==pw){
+      // 홈페이지로 이동
+      nav(`/?nick=${nick}`)
     }
     else{
       alert("잘못 입력했습니다")

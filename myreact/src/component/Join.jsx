@@ -23,7 +23,7 @@ const Join = () => {
 
     if(inputId!='' && inputPw!='' && inputNick!=''){
       // Login 페이지로 이동
-      nav('/login')
+      nav(`/login?id=${inputId}&pw=${inputPw}&nick=${inputNick}`)
     }
     else{
       alert("빠진 값이 있습니다")
@@ -43,6 +43,7 @@ const Join = () => {
         <p>ID:<input onChange={(e)=>setId(e.target.value)}></input></p>
         <p>PW:<input onChange={(e)=>setInputPw(e.target.value)}></input></p>
         <p>NICK:<input onChange={(e)=>setInputNick(e.target.value)}></input></p>
+        {/* <Link to= "/about?num=2">about 이동 Link</Link> */}
         {/* <Link to= "/login"><button >JOIN</button></Link> */}
         <button onClick={btnJoin}>Join</button>
         <button>초기화</button>
